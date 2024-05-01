@@ -21,5 +21,25 @@ namespace EmprestimoLivros.Controllers
 
             return View(emprestimos);
         }
+
+        [HttpGet]
+        public IActionResult Cadastrar() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Cadastrar(EmprestimosModel emprestimos) 
+        {
+            if (ModelState.IsValid) 
+            {
+                _db.Emprestimos.Add(emprestimos);           //Adicionando dados no bando de dados
+                _db.SaveChanges();                          //Salvando esses dados 
+
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
     }
 }
