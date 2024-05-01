@@ -23,9 +23,29 @@ namespace EmprestimoLivros.Controllers
         }
 
         [HttpGet]
-        public IActionResult Cadastrar() 
+        public IActionResult Cadastrar()
         {
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Editar(int? id) 
+        {
+            if(id == null || id == 0) 
+            {
+                return NotFound();
+
+            }
+
+            EmprestimosModel emprestimo = _db.Emprestimos.FirstOrDefault(x => x.Id == id);
+
+            if(emprestimo == null)
+            {
+                return NotFound();
+            }
+
+
+            return View(emprestimo);
         }
 
         [HttpPost]
