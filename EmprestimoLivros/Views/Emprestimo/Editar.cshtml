@@ -4,7 +4,7 @@
     ViewData["title"] = "Editar Emprestimos";
 }
 
-<div class="container bg-dark p-5 rouded-5">
+<div class="container bg-dark p-3 rounded-5">
 
     <div class="mb-5 text-center">
         <h1 class="text-light">Editar Empréstimos</h1>
@@ -15,19 +15,19 @@
 
         <div class="form-group">
             <label for="Recebedor" class="form-label text-light">Recebedor:</label>
-            <input type="text" class="form-control" asp-for="Recebedor" id="Recebedor" placeholder="Quem está recebendo o livro?">
+            <input type="text" class="form-control text-light" asp-for="Recebedor" id="Recebedor" placeholder="Quem está recebendo o livro?">
             <span asp-validation-for="Recebedor" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label for="Fornecedor" class="form-label text-light">Fornecedor: </label>
-            <input type="text" class="form-control" asp-for="Fornecedor" id="Fornecedor" placeholder="Quem está emprestando o livro?">
+            <input type="text" class="form-control text-light" asp-for="Fornecedor" id="Fornecedor" placeholder="Quem está emprestando o livro?">
             <span asp-validation-for="Fornecedor" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label for="Livro" class="form-label text-light">Livro:</label>
-            <input type="text" class="form-control" asp-for="LivroEmprestado" id="Livro" placeholder="Qual é o livro que está sendo emprestado?">
+            <input type="text" class="form-control text-light" asp-for="LivroEmprestado" id="Livro" placeholder="Qual é o livro que está sendo emprestado?">
             <span asp-validation-for="LivroEmprestado" class="text-danger"></span>
         </div>
 
